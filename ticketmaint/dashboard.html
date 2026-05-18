@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicketMaint - Painel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <div class="header-content">
+        <div class="brand">
+          <div class="logo-icon">⚙️</div>
+          <div class="brand-text">
+            <h1>TicketMaint</h1>
+            <p>Painel de Controle</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Solicitar</a>
+          <a href="dashboard.html" class="nav-link active">Painel</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content dashboard-main">
+      <div class="dashboard-container">
+
+        <!-- Stats -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-info">
+              <span class="stat-value" id="totalCount">0</span>
+              <span class="stat-label">Total de Chamados</span>
+            </div>
+          </div>
+          <div class="stat-card pending">
+            <div class="stat-icon">⏳</div>
+            <div class="stat-info">
+              <span class="stat-value" id="pendentesCount">0</span>
+              <span class="stat-label">Pendentes</span>
+            </div>
+          </div>
+          <div class="stat-card inprogress">
+            <div class="stat-icon">🔧</div>
+            <div class="stat-info">
+              <span class="stat-value" id="emReparoCount">0</span>
+              <span class="stat-label">Em Reparo</span>
+            </div>
+          </div>
+          <div class="stat-card completed">
+            <div class="stat-icon">✅</div>
+            <div class="stat-info">
+              <span class="stat-value" id="concluidosCount">0</span>
+              <span class="stat-label">Concluídos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filters & Actions -->
+        <div class="filters-section">
+          <div class="search-box">
+            <input id="search" type="text" placeholder="🔍 Buscar máquina ou setor..." />
+          </div>
+          <div class="filter-group">
+            <select id="filterGravidade">
+              <option value="all">Todas as gravidades</option>
+              <option value="Baixa">🟢 Baixa</option>
+              <option value="Média">🟡 Média</option>
+              <option value="Alta">🔴 Alta</option>
+            </select>
+          </div>
+          <div class="action-buttons">
+            <button id="exportCsvBtn" class="btn-secondary">📥 Exportar CSV</button>
+            <button id="exportJsonBtn" class="btn-secondary">💾 Backup JSON</button>
+            <button id="clearAllBtn" class="btn-danger">🗑️ Limpar Tudo</button>
+          </div>
+        </div>
+
+        <!-- Tickets List -->
+        <div class="tickets-container" id="listaChamados">
+          <!-- Chamados serão inseridos aqui -->
+        </div>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <p>TicketMaint © 2026 - Transformando manutenção em produtividade</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

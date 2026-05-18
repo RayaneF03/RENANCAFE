@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicketMaint - Nova Solicitação</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <div class="header-content">
+        <div class="brand">
+          <div class="logo-icon">⚙️</div>
+          <div class="brand-text">
+            <h1>TicketMaint</h1>
+            <p>Gestão de Manutenção Industrial</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link active">Solicitar</a>
+          <a href="dashboard.html" class="nav-link">Painel</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="form-container">
+        <div class="form-header">
+          <h2>Nova Solicitação</h2>
+          <p>Registre rapidamente uma manutenção preventiva ou corretiva</p>
+        </div>
+
+        <form id="formChamado" class="form-grid">
+          <div class="form-group">
+            <label for="maquina">Máquina</label>
+            <select id="maquina" required>
+              <option value="">Selecione uma máquina</option>
+              <option value="Injetora 01">Injetora 01</option>
+              <option value="Torno CNC">Torno CNC</option>
+              <option value="Prensa Hidráulica">Prensa Hidráulica</option>
+              <option value="Fresadora">Fresadora</option>
+              <option value="Linha de Estampagem">Linha de Estampagem</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="setor">Setor</label>
+            <input type="text" id="setor" placeholder="Ex: Linha A - Turno 1" />
+          </div>
+
+          <div class="form-group">
+            <label for="gravidade">Gravidade</label>
+            <select id="gravidade" required>
+              <option value="Baixa">🟢 Baixa</option>
+              <option value="Média">🟡 Média</option>
+              <option value="Alta">🔴 Alta</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="operador">Operador</label>
+            <input type="text" id="operador" placeholder="Seu nome" />
+          </div>
+
+          <div class="form-group full-width">
+            <label for="descricao">Descrição do Problema</label>
+            <textarea id="descricao" placeholder="Descreva os sintomas ou o problema encontrado..." rows="5"></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <button type="submit" class="btn-submit">
+              <span class="btn-icon">✓</span> Solicitar Suporte
+            </button>
+          </div>
+        </form>
+
+        <div class="form-footer">
+          <p>Seus chamados serão armazenados localmente e sincronizados automaticamente.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <p>TicketMaint © 2026 - Transformando manutenção em produtividade</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

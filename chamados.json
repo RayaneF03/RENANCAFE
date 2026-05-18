@@ -1,0 +1,15 @@
+[
+  {
+    "id": "1779133242256",
+    "maquina": "Injetora 01",
+    "setor": "Linha A - Turno 1",
+    "gravidade": "Alta",
+    "operador": "João Silva",
+    "descricao": "Máquina com ruído estranho no motor",
+    "status": "Concluído",
+    "data": "2026-05-18T16:40:42.256891",
+    "dataAbertura": "18/05/2026, 16:40:42",
+    "dataInicio": "2026-05-18T16:41:30.023447",
+    "dataConclusao": "2026-05-18T16:41:36.440046"
+  }
+]
